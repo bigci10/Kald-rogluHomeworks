@@ -1,0 +1,107 @@
+/*Question 1
+
+1. Which of the following are valid Java identifiers? (Choose all that apply)
+
+    A. A$B
+    B. _helloWorld
+    C. true
+    D. java.lang
+    E. Public
+    F. 1980_s
+
+   Cevap:
+    A, B, E seçenekleri geçerlidir.
+    Seçenek A, tanımlayıcılarda dolar işareti kullanabileceğiniz için geçerlidir.
+    Seçenek B, tanımlayıcılarda alt çizgi kullanabileceğiniz için geçerlidir.
+    Seçenek C geçerli bir tanımlayıcı değildir çünkü "true" Java'da ayrılmış(reserved) bir kelime olarak kullanılır.
+    Seçenek D, tanımlayıcılarda nokta kullanımına izin vermediği için geçerli değildir.
+    Seçenek E, Java'nın büyük-küçük harf duyarlı olduğu için "Public" bir ayrılmış kelime olmadığından geçerlidir.
+    Seçenek F, ilk karakterin harf, $ veya _ olmaması nedeniyle geçerli değildir.
+*/
+
+/*Question 9
+
+9. Which of the following legally fill in the blank so you can run the main() method from the
+command line? (Choose all that apply) public static void main( )
+
+    A. String[] _names
+    B. String[] 123
+    C. String abc[]
+    D. String _Names[]
+    E. String... $n
+    F. String names
+    G. None of the above.
+
+   Cevap:
+    A, C, D, E doğru yanıtlardır.
+    A seçeneği doğrudur çünkü main() metodunun geleneksel imzasıdır ve değişkenler alt çizgi ile başlayabilir.
+    C ve D seçenekleri doğrudur çünkü dizi işlemcisi değişken isminden sonra yer alabilir.
+    E seçeneği doğrudur çünkü bir dizi yerine varargs kullanılabilir.
+    B seçeneği yanlıştır çünkü değişkenler rakamla başlayamaz.
+    F seçeneği bir yöntem için doğru olsa da, argüman bir dizi veya varargs olmalıdır.
+    F seçeneği doğru bir yöntemdir. Ancak yanlış parametre tipine sahip olduğu için komut satırından çalıştırılamaz
+
+*/
+
+/*Question 10
+
+10. Which of the following are legal entry point methods that can be run from the command
+line? (Choose all that apply)
+
+    A. private static void main(String[] args)
+    B. public static final main(String[] args)
+    C. public void main(String[] args)
+    D. public static void test(String[] args)
+    E. public static void main(String[] args)
+    F. public static main(String[] args)
+    G. None of the above.
+
+   Cevap:
+    E. Seçenek E, standart main() metodu imza formatıdır. Bunu ezberlemeniz gerekmektedir.
+    A seçeneği yanlıştır çünkü main() metodu public olmalıdır.
+    B ve F seçenekleri yanlıştır çünkü main() metodu void return tipinde olmalıdır.
+    C seçeneği yanlıştır çünkü main() metodu static olmalıdır.
+    D seçeneği yanlıştır çünkü main() metodu "main" olarak adlandırılmalıdır.
+
+*/
+
+/*Question 22
+
+22. Which of the following are true statements? (Choose all that apply)
+
+    A. Java allows operator overloading.
+    B. Java code compiled on Windows can run on Linux.
+    C. Java has pointers to specific locations in memory.
+    D. Java is a procedural language.
+    E. Java is an object-oriented language.
+    F. Java is a functional programming language.
+
+   Cevap:
+    B, E. C++ operator aşırı yükleme ve işaretçiler özelliğine sahiptir.
+    Java, bunlardan hiçbirine sahip olmamaya özen göstermiştir.
+    Java, nesnelerin referanslarını içerir, ancak bu referanslar bellekte hareket edebilen bir nesneye işaret ederler.
+    B seçeneği doğrudur çünkü Java platform bağımsızdır.
+    E seçeneği doğrudur çünkü Java nesne yönelimlidir.
+    Bazı işlevsel programlama özelliklerini desteklemesine rağmen, bunlar bir sınıfın içinde gerçekleşir.
+
+*/
+
+/*Question 23
+
+23. Which of the following are true? (Choose all that apply)
+
+    A. javac compiles a .class file into a .java file.
+    B. javac compiles a .java file into a .bytecode file.
+    C. javac compiles a .java file into a .class file.
+    D. Java takes the name of the class as a parameter.
+    E. Java takes the name of the .bytecode file as a parameter.
+    F. Java takes the name of the .class file as a parameter.
+
+   Cevap:
+    C ve D doğru cevap.
+    Java kaynak kodlarını .java dosyalarında ve bytecode'ları .class dosyalarında tutar.
+    .bytecode dosyaları kullanmaz.
+    Bir Java programını çalıştırırken, sadece sınıfın adını .class uzantısı olmadan geçmeniz gerekir.
+
+*/
+

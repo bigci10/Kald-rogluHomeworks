@@ -1,0 +1,7 @@
+C:\Users\bigci\Desktop\Hello>javac Hello.java
+
+C:\Users\bigci\Desktop\Hello>java HelloTest
+HelloMehmet:)
+HelloWorld:)
+
+C:\Users\bigci\Desktop\Hello>

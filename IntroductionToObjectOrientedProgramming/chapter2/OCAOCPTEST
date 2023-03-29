@@ -1,0 +1,313 @@
+/* Question 3
+
+3. What is the proper filename extension for a Java bytecode compiled file?
+
+    A. .java
+    B. .bytecode
+    C. .class
+    D. .dll
+
+   Cevap:
+    C. Java derlenmiş bytecode dosyalarının doğru uzantısı .class'tır, bu nedenle C seçeneği doğru cevaptır.
+
+*/
+
+/*Question 5
+
+5. Which of the following is not a facet of traditional object-oriented programming languages?
+
+    A. Objects are grouped as procedures, separate from the data they act on.
+    B. An object can take many forms via casting.
+    C. An object can hold data, referred to as attributes.
+    D. An object can perform actions, via methods.
+
+   Cevap:
+    A.
+    B, C ve D seçenekleri geleneksel nesne yönelimli programlamanın özellikleridir.
+    Seçenek A, bir nesne yönelimli proje, genellikle verileri ve bu verilerle ilgili eylemleri tek bir nesneye gruplama eğilimindedir, bu yüzden yanlıştır.
+
+*/
+
+/*Question 6
+
+6. Which variables have a scope limited to a method?
+
+    A. Interface variables
+    B. Class variables
+    C. Instance variables
+    D. Local variables
+
+   Cevap:
+    D. Sadece yerel değişkenlerin böyle küçük bir kapsamı vardır, bu nedenle D seçeneği doğru cevaptır.
+
+*/
+
+/*Question 8
+
+8. Which of the following is not a valid code comment in Java?
+
+    A. // Add 5 to the result
+    B. /*** TODO: Fix bug 12312 ***/
+    C. # Add configuration value
+    D. /* Read file from system ****/
+
+   Cevap:
+    C. Java, A, B ve D seçeneklerini geçerli yorumlar olarak kabul eder.
+    B ve D'de gösterildiği gibi /* / sözdizimi ek (ve dengesiz) yıldız () karakterleri içerebilir.
+    Seçenek C yanlıştır, çünkü hashtag (#) Java'da geçerli bir yorum karakteri değildir.
+
+*/
+
+/*Question 9
+
+9. Which statement about a valid .java file is true?
+
+    A. It can only contain one class declaration.
+    B. It can contain one public class declaration and one public interface definition.
+    C. It must define at least one public class.
+    D. It may define at most one public class.
+
+   Cevap:
+    D. Geçerli bir .java dosyası, herhangi bir sayıda sınıf veya arayüz tanımlayabilir, ancak en fazla bir tane public sınıfa sahip olabilir veya hiç public sınıf tanımlayamaz.
+    Bu nedenlerle, A, B ve C seçenekleri yanlış, tek doğru cevap seçeneği D'dir.
+
+*/
+
+/*Question 13
+
+13. Which statements about Java are true?
+ I. The java command can execute .java and .class files.
+ II. Java is not object oriented.
+ III. The javac command compiles directly into native machine code.
+
+    A. I only
+    B. III only
+    C. II and III
+    D. None are true.
+
+   Cevap:
+    D. java komutu yalnızca derlenmiş .class dosyalarını çalıştırabilir, bu yüzden I yanlıştır.
+    Java'nın en önemli tasarım ilkelerinden biri nesne yönelimlilidir, bu nedenle II yanlıştır.
+    javac komutu bytecode'a derler ve bu JVM'de çalıştırılması gereken, doğrudan makine kodu değildir, bu yüzden III yanlıştır.
+    Hiçbir ifade doğru olmadığı için, doğru cevap Seçenek D'dir.
+
+*/
+
+/*Question 20
+
+20. What is the correct character for terminating a statement in Java?
+
+    A. A colon (:)
+    B. An end-of-line character
+    C. A tab character
+    D. A semicolon (;)
+
+   Cevap:
+    D. Bazı diğer programlama dillerinin aksine, kod satırını sonlandırmanın doğru yolu noktalı virgül (;) kullanmaktır, bu nedenle doğru cevap D'dir.
+
+*/
+
+/*Question 31
+
+31. Which of the following statements about Java is true?
+
+    A. Java is a procedural programming language.
+    B. Java allows method overloading.
+    C. Java allows operator overloading.
+    D. Java allows direct access to objects in memory.
+
+   Cevap:
+    B. Java nesne yönelimlidir, prosedürel değildir, bu nedenle Seçenek A yanlış bir ifadedir.
+    Java, alt sınıflarda yöntem aşırı yüklemeye izin verir, bu nedenle Seçenek B doğrudur.
+    Operatör aşırı yüklemesi, C ++ gibi dillerde izin verilir, ancak Java'da değil, bu nedenle Seçenek C de yanlıştır.
+    Son olarak, JVM, nesnelerin bellekteki konumunu yönetir ve Java uygulamasına şeffaf bir şekilde değişebilir, bu nedenle Seçenek D doğru değildir.
+
+*/
+
+/*Question 35
+
+35. Which of the following is a valid code comment in Java?
+
+    A. //////// Walk my dog
+    B. #! Go team!
+    C. / Process fails at runtime /
+    D. None of the above
+
+   Cevap:
+    A. İki eğik çizgi (//) sözdizimi, başlangıcında iki tane bulunması şartıyla herhangi bir sayıda eğik çizgi içerebilir, bu nedenle A seçeneği doğru cevaptır.
+    (#), yanında bir ünlem işareti (!) olsa da, Java'da bir yorum karakteri değildir, bu nedenle B seçeneği yanlıştır.
+    C seçeneği, tek bir eğik çizgi (/) Java'da geçerli bir yorum değildir, bu nedenle yanlıştır.
+    Son olarak, A seçeneği geçerli bir yorum olduğu için D seçeneği yanlıştır.
+
+*/
+
+/*Question 36
+
+36. Which of the following method signatures is not a valid declaration of an entry point in a
+Java application?
+
+    A. public static void main(String... arguments)
+    B. public static void main(String arguments)
+    C. public static final void main(String[] arguments)
+    D. public static void main(String[] arguments)
+
+   Cevap:
+    B. Bir Java uygulamasındaki bir giriş noktası, tek bir String[] argümanı olan, void dönüş
+    tipine, ve public ve static belirleyicilere sahip bir main() metodu içerir. Seçenek D,
+    bu yöntemin tipik sözdizimidir, ancak Seçenek A ve C de bu yöntemin geçerli diğer formlarıdır.
+    Not olarak, final belirleyici metot imzasına opsiyonel olarak eklenir. Ayrıca, main() metodu
+    bir vararg veya dizi alabilir. Seçenek B, bir dizi almadığı için tek geçersiz beyandır.
+
+*/
+
+/*Question 38
+
+38. What is required to define a valid Java class file?
+
+    A. A class declaration
+    B. A package statement
+    C. At least one import statement
+    D. The public modifier
+
+   Cevap:
+    A. Bir Java sınıf dosyasında tek gerekli bileşen bir sınıf tanımıdır ve bu nedenle sadece Seçenek A doğrudur.
+    Burada bir Java sınıf dosyasından bahsettik; Java ayrıca arabirimleri ve enum'ları bir dosyada tanımlamaya da izin verir.
+    Bir sınıfın tanımlanması için paket ifadesi ve import ifadeleri opsiyoneldir, bu nedenle Seçenek B ve C yanlıştır.
+    Ayrıca, bir dosyada paket düzeyi erişimle bir sınıf tanımlanabilir, bu nedenle Seçenek D yanlış bir cevaptır.
+
+*/
+
+/*Question 39
+
+39. What is the proper filename extension for a Java source file?
+
+    A. .jav
+    B. .class
+    C. .source
+    D. .java
+
+   Cevap:
+    D. Bir Java derlenmiş bytecode dosyası için doğru uzantı .class'tır, bu nedenle D seçeneği doğru cevaptır.
+
+*/
+
+/*Question 42
+
+42._____is the technique of structuring programming data as a unit consisting of
+attributes, with actions defined on the unit.
+
+    A. Encapsulation
+    B. Object orientation
+    C. Platform independence
+    D. Polymorphism
+
+   Cevap:
+    B. Nesne yönelimli programlama, verileri nesnelere yapılandırmanın bir tekniği olup, nesneler veri ve veri üzerinde işlem yapan bir dizi eylem içerebilir.
+    Bu nedenle, Doğru cevap B seçeneğidir.
+
+*/
+
+/*Question 25(Chapter 6)
+
+25. Which of the following is a valid method name in Java?
+
+    A. Go_$Outside$2()
+    B. have-Fun()
+    C. new()
+    D. 9enjoyTheWeather()
+
+   Cevap:
+    A. Yöntem isimleri alt çizgi _ karakterinin yanı sıra dolar $ sembolünü de içerebildiği için seçenek A doğrudur.
+    Bir yöntemin küçük harfle başlamasını gerektiren bir kural olmadığına dikkat edin; bu sadece topluluk tarafından benimsenen bir uygulamadır.
+    Seçenek B yanlıştır çünkü tire - karakteri bir yöntem adının bir parçası olamaz.
+    Seçenek C yanlıştır çünkü new Java'da ayrılmış bir sözcüktür.
+    Son olarak, Seçenek D yanlıştır.
+    Bir yöntem adı bir harfle, dolar $ sembolüyle veya alt çizgi _ karakteriyle başlamalıdır.
+
+*/
+
+/*Question 48(Chapter 6)
+
+48. Which of the following is a valid method name in Java?
+
+    A. $sprint()
+    B. \jog13()
+    C. walk#()
+    D. %run()
+
+   Cevap:
+    A. Java metodları bir harfle, dolar $ işaretiyle veya alt çizgi _ karakteriyle başlamalıdır.
+    Bu nedenlerle, B ve D seçenekleri yanlıştır ve A seçeneği doğrudur. C seçeneği yanlıştır.
+    Hashtag (#) sembolü bir metod adına dahil edilemez.
+
+*/
+
+/*Question 27
+
+27. Which is the correct order of statements for a Java class file?
+
+    A. import statements, package statement, class declaration
+    B. package statement, class declaration, import statement
+    C. class declaration, import statements, package declaration
+    D. package statement, import statements, class declaration
+
+   Cevap:
+    D. Java sınıfları şu sırayla tanımlanır: paket ifadesi, içe aktarma ifadeleri, sınıf bildirimi,
+    bu nedenle Seçenek D doğru cevaptır. Bu ifadelerin hepsi gerekli değildir.
+    Örneğin, bir sınıfın paket ifadesi olmayabilir, ancak varsa dosyanın en üstünde olmalıdır.
+
+*/
+
+/*Question 32
+
+32. Given the following code, what values inserted in order into the blank lines, allow the code
+to compile?
+
+____agent;
+public ____ Banker {
+ private static ___ getMaxWithdrawal() {
+    return 10;
+ }
+}
+
+    A. import, class, null
+    B. import, interface, void
+    C. package, int, int
+    D. package, class, long
+
+   Cevap:
+    D. Seçenek A, yöntemin geri dönüş tipinin null olamayacağı için yanlıştır.
+    Seçenek B de geri dönüş tipi void ise ve yöntem bir return ifadesi kullanıyorsa yanlıştır.
+    Seçenek C de, sınıf anahtar kelimesinin int ile değiştirilmesi nedeniyle yanlıştır.
+    Seçenek D, kodun hatasız bir şekilde derlenmesine izin veren tek doğru cevaptır.
+    Unutmayın, bu soru için başka değerler de mümkündür.
+    Örneğin, son boşluğa int veya long girilebilir.
+    Buradaki anahtar nokta, yalnızca mevcut cevap seçeneklerinden birinin kodun hatasız derlenmesine izin vermesidir.
+
+
+*/
+
+49. Given the following class diagram, which Java implementation most closely matches this
+structure?
+    Book
++ numberOfPages
++ getRating()
+
+    A. public class Book {
+        public int numOfPages;
+    B. public class Book {
+        public String getRating() {return null;} }
+    C. public class Book {
+        public int numberOfPages;
+        public String getRating() {return null;} }
+    D. public class Book {
+        void numberOfPages;
+
+   Cevap:
+    C. Seçenek A sınıfın kapanış parantezini eksik olduğu için derlenmez.
+    Seçenek D değişken için geçerli bir tür olmadığı için derlenmez.
+    Bununla birlikte, Seçenek A ve D getRating() metodunu eksik olduğundan yanlıştır.
+    numberOfPages için bir kısaltma kullanır. Seçenek B numberOfPages özniteliğini eksik olduğundan yanlıştır.
+    Seçenek C doğru cevaptır çünkü numberOfPages özniteliğini ve getRating() yöntemini doğru şekilde tanımlar.
+
+*/
