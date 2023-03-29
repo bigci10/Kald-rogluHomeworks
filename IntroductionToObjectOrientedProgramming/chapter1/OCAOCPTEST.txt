@@ -1,0 +1,72 @@
+    /*Question 1
+      Which of the following method signatures is a valid declaration of an entry point in a Java application?
+        A. public void main(String[] args)
+        B. public static void main()
+        C. private static void start(String[] mydata)
+        D. public static final void main(String[] mydata)
+
+        Cevap:
+           Java uygulamalarında bir giriş noktası, tek bir String[] argümanına, void dönüş türüne ve public ve static değiştiricilere sahip bir main() yönteminden oluşur.
+           Girdi argümanındaki değişkenin adı önemli değildir.
+           Seçenek A, static belirteci eksik, Seçenek B, String[] argümanını eksik, ve Seçenek C yanlış erişim değiştiricisi ve yöntem adına sahip.
+           Yalnızca Seçenek D bu gereksinimleri karşılar.
+           Not olarak, final değiştirici isteğe bağlıdır ve bir giriş noktası yöntemine eklenebilir.
+    */
+
+    /*Question 16
+      Given that the current directory is /user/home, with an application Java file in /user/home/Manager.java that uses the default package, which are the correct commands
+      to compile and run the application in Java?
+        A. javac Manager
+           java Manager
+
+        B. javac Manager.java
+           java Manager
+
+        C. javac Manager
+           java Manager.class
+
+        D. javac Manager.java
+           java Manager.class
+
+        Cevap:
+           Derleme komutu, dosyanın tam veya göreceli adını, .java uzantısıyla birlikte gerektirdiğinden A ve C seçenekleri yanlıştır.
+           Yürütme komutu, dosya adı uzantısı olmadan sınıf adını gerektirdiğinden D seçeneği yanlıştır.
+           B seçeneği, derleme ve yürütme komutlarının doğru olduğu tek seçenektir.
+    */
+
+    /*Question 19
+      Which of the following is true of a Java bytecode file?
+
+        A. It can be run on any computer with a compatible JVM.
+        B. It can only be executed on the same type of computer that it was created on.
+        C. It can be easily read and modified in a standard text editor.
+        D. It requires the corresponding .java that created it to execute.
+
+        Cevap:
+           Bir Java bytecode dosyası, herhangi bir uyumlu JVM'e sahip bilgisayarda çalıştırılmak üzere tasarlanmış ikili kodlu bir talimat setidir,
+           bu nedenle A seçeneği tek doğru cevaptır.
+     */
+
+    /*Question 23
+        Which of the following features allows a Java class to be run on a wide variety of computers and devices?
+          A. Encapsulation
+          B. Object oriented
+          C. Inheritance
+          D. Platform independence
+
+          Cevap:
+            Doğru Cevap D. Platform bağımsızlığı, Java'nın çeşitli farklı cihazlarda çalıştırılmasına izin veren özelliğidir.
+    */
+
+    /*Question 24
+        Which of the following is not a property of a JVM?
+
+          A. It prevents Java bytecode from being easily decoded/decompiled.
+          B. It supports platform independence.
+          C. It manages memory for the application.
+          D. It translates Java instructions to machine instructions.
+
+          Cevap:
+            B, C ve D seçenekleri JVM'lerle ilgili doğru ifadelerdir. A seçeneği ise yanlıştır.
+            JVM'lerle ilgili bir ifade değildir ve Java bytecode'un sıklıkla kolayca çözümlenebileceği / decompile edilebileceği gerçeğine aykırıdır.
+    */
