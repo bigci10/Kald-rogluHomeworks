@@ -1,0 +1,140 @@
+/*
+10. Given the following application, fill in the missing values in the table starting from the top
+and going downward.
+
+package competition;
+public class Robot {
+ static String weight = "A lot";
+ /* default */ double ageMonths = 5, ageDays = 2;
+ private static boolean success = true;
+ public void main(String[] args) {
+    final String retries = "1";
+    // P1
+ }
+}
+
+    A. 2, 0, 1
+    B. 2, 2, 1
+    C. 1, 0, 1
+    D. 0, 2, 1
+
+   Cevap:
+    Bu soruda main() metodu static olmadığından hem sınıf değişkenlerine hem de örnek değişkenlerine erişebilir.
+    İki tane sınıf değişkeni ve iki tane örnek değişkeni tanımlandığına göre, doğru cevap B seçeneğidir.
+
+/*
+14.Which of the following lines of code is not allowed as the first line of a Java class file?
+
+    A. import widget.*;
+    B. // Widget Manager
+    C. package sprockets;
+    D. int facilityNumber;
+
+   Cevap:
+    D. Bir sınıf bir yorumla başlayabilir, isteğe bağlı bir paket ifadesiyle veya bir paket ifadesi yoksa bir içe aktarma ifadesiyle başlayabilir.
+    Bir değişken tanımı ile başlayamaz, bu nedenle D seçeneği doğru cevaptır.
+*/
+
+/*
+25.Which of the following variables are always in scope for the entire program?
+
+    A. Package variables
+    B. Class variables
+    C. Instance variables
+    D. Local variables
+
+   Cevap:
+    B. Paket değişkenleri diye bir şey yok, bu yüzden seçenek A yanlıştır.
+    Seçenek C yanlıştır çünkü değişken yalnızca sınıfın belirli bir örneği içinde kullanılabilir.
+    Seçenek D de yanlıştır çünkü değişken sadece tanımlandığı tek bir yöntem için geçerlidir.
+    Seçenek B, sınıf değişkenlerinin program içinde erişilebilir olduğu tek doğru cevaptır.
+
+*/
+
+/*
+37. Given the file Magnet.java below, which of the marked lines can you independently insert
+the line public String color; into and still have the code compile?
+
+    // line a1
+    public class Magnet {
+    // line a2
+        public void attach() {
+        // line a3
+        }
+    // line a4
+    }
+
+    A. a1 and a3
+    B. a2 and a4
+    C. a2, a3, and a4
+    D. a1, a2, a3, and a4
+
+   Cevap:
+    B. Kod satırı a1'de hiçbir değişkenin dosya içindeki sınıf bildiriminden dışında yer alması
+    mümkün olmadığından, A ve D seçenekleri yanlıştır. Ayrıca, yerel değişkenler gibi metodların
+    içinde tanımlanan değişkenlerin public gibi erişim belirleyicilere sahip olması mümkün değildir, bu nedenle C seçeneği yanlıştır.
+    Kod satırı a2 ve a4'te bağımsız olarak eklenebilir çünkü
+    örnek değişkenleri metod dışında sınıfın herhangi bir yerinde tanımlanabilir.
+    Bu nedenle,Doğru seçenek B'dir.
+*/
+
+/*
+22. Given the following class definition, which is the only line that does not contain a
+compilation error?
+
+    1: public ThisClassDoesNotCompile {
+    2: double int count;
+    3: void errors() {}
+    4: static void private limit; }
+
+    A. Line 1
+    B. Line 2
+    C. Line 3
+    D. Line 4
+
+   Cevap:
+    C. Satır 1, class anahtar kelimesini içermiyor.
+    Satır 2, aynı değişken için iki tür içeriyor.
+    Satır 3, bir yöntem tanımı için geçerli olduğundan C doğru cevaptır.
+    Son olarak, satır 4, dönüş türünden sonra erişim belirleyici olan private'ın yer aldığı ve izin verilmeyen geçersiz bir tür olan void içeriyor.
+*/
+
+/*
+46.What is the result of compiling and executing the following class?
+package sports;
+public class Bicycle {
+ String color = "red";
+ private void printColor(String color) {
+    color = "purple";
+    System.out.print(color);
+ }
+ public static void main(String[] rider) {
+    new Bicycle().printColor("blue");
+ }
+}
+
+    A. red
+    B. purple
+    C. blue
+    D. It does not compile.
+
+   Cevap:
+    B. İlk olarak, örnekleme tarafından tanımlanan ve kırmızıya ayarlanan color değişkeni yerel kapsama gölge düştüğünden printColor() yönteminde görmezden gelinir, bu nedenle Seçenek A yanlıştır.
+    printColor() yöntemine aktarılan color değişkeninin değeri mavi olsa da, mora atanarak kaybedilir, bu nedenle Seçenek B doğru cevaptır ve Seçenek C yanlıştır.
+    Seçenek D hatalıdır, çünkü kod sorunsuz bir şekilde derlenir ve çalıştırılır.
+*/
+
+/*
+50. Which statement about the JVM is true?
+
+    A. The JVM schedules garbage collection on a predictable schedule.
+    B. The JVM ensures that the application will always terminate.
+    C. The JVM requires a properly defined entry point method to execute the application.
+    D. A Java compiled code can be run on any computer.
+
+   Cevap:
+    C. Bir uygulama çalışırken çöp toplama her zaman gerçekleşebilir, özellikle de mevcut bellek aniden azalırsa, bu nedenle Seçenek A yanlıştır.
+    Seçenek B de yanlıştır, çünkü asla sona ermeyen sonsuz bir döngüye sahip bir Java uygulaması oluşturmak çok kolaydır.
+    Seçenek D yanlış çünkü bir Java sınıfını yürütmek için bilgisayarın JVM'i çalıştırabilecek durumda olması gerekmektedir.
+    Giriş noktası yöntemini içermesi nedeniyle Seçenek C tek doğru cevaptır ve JVM uygulamayı yürütmeye başlamak için bir giriş noktası yöntemi gerektirir.
+*/

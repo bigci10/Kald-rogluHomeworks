@@ -1,0 +1,224 @@
+/*Question 10
+
+3.Which of the following are true? (Choose all that apply)
+
+    4: short numPets = 5;
+    5: int numGrains = 5.6;
+    6: String name = "Scruffy";
+    7: numPets.length();
+    8: numGrains.length();
+    9: name.length();
+
+    A. Line 4 generates a compiler error.
+    B. Line 5 generates a compiler error.
+    C. Line 6 generates a compiler error.
+    D. Line 7 generates a compiler error.
+    E. Line 8 generates a compiler error.
+    F. Line 9 generates a compiler error.
+    G. The code compiles as is.
+
+   Cevap:
+    Seçenek B, D, E doğrudur. Seçenek A (satır 4), short'un bir tam sayı tipi olduğu için derlenir.
+    Seçenek B (satır 5), 5.6'nın bir ondalık sayı tipi olduğu, ancak int'in bir tam sayı tipi olduğu için bir derleyici hatası oluşturur.
+    Seçenek C (satır 6), bir String'e atandığı için derlenir.
+    Seçenekler D ve E (satırlar 7 ve 8), short ve int temel tipler olduğu için derlenmez.
+    Temel tipler, üzerlerinde yöntem çağrısına izin vermezler.
+    Seçenek F (satır 9), length() String üzerinde tanımlandığı için derlenir.
+
+*/
+
+/*
+4. Given the following class, which of the following is true? (Choose all that apply)
+ 1: public class Snake {
+ 2:
+ 3:     public void shed(boolean time) {
+ 4:
+ 5:         if (time) {
+ 6:
+ 7:         }
+ 8:         System.out.println(result);
+ 9:
+10:     }
+11: }
+
+    A. If String result = "done"; is inserted on line 2, the code will compile.
+    B. If String result = "done"; is inserted on line 4, the code will compile.
+    C. If String result = "done"; is inserted on line 6, the code will compile.
+    D. If String result = "done"; is inserted on line 9, the code will compile.
+    E. None of the above changes will make the code compile.
+
+   Cevap:
+    A, B
+    2. satıra değişken eklemek, result değişkenini bir örnek değişkeni yapar.
+    Örnek değişkenleri, nesnenin yaşam süresi boyunca kapsamda olduğundan, A seçeneği doğrudur.
+    4. satıra değişken eklemek, sonucu yöntemin tüm kapsamı olan yerel bir değişken yapar.
+    6. satıra değişken eklemek, sonucu 6-7 satırlarının kapsamında olan bir yerel değişken yapar.
+    8. satıra kapsam dışında olduğundan, println derlenmez ve C seçeneği yanlıştır.
+    9. satıra değişken eklemek, sonucu 9 ve 10 satırlarının kapsamı olan bir yerel değişken yapar.
+    8. satırın bildirime göre öncesinde olması nedeniyle derlenemez ve D seçeneği yanlıştır.
+    Son olarak, kod derlenebilir hale getirilebildiğinden, E seçeneği yanlıştır.
+*/
+
+/*
+5.Given the following classes, which of the following can independently replace INSERT
+IMPORTS HERE to make the code compile? (Choose all that apply)
+
+package aquarium;
+    public class Tank { }
+
+package aquarium.jellies;
+    public class Jelly { }
+
+package visitor;
+INSERT IMPORTS HERE
+    public class AquariumVisitor {
+        public void admire(Jelly jelly) { } }
+
+    A. import aquarium.*;
+    B. import aquarium.*.Jelly;
+    C. import aquarium.jellies.Jelly;
+    D. import aquarium.jellies.*;
+    E. import aquarium.jellies.Jelly.*;
+    F. None of these can make the code compile.
+
+   Cevap:
+    C, D. Seçenek C doğrudur, çünkü Jelly sınıfını sınıf adıyla içe aktarır.
+    Seçenek D doğrudur çünkü jellies paketindeki tüm sınıfları, Jelly dahil olmak üzere içe aktarır.
+    Seçenek A yanlıştır çünkü yalnızca aquarium paketindeki sınıfları - bu durumda Tank'ı - içe aktarır ve alt düzey paketlerdeki sınıfları içe aktaramaz.
+    Seçenek B yanlıştır çünkü joker karakterleri, yalnızca bir içe aktarma ifadesinin sonunda kullanılabilir.
+    Seçenek E yanlıştır çünkü bir düzenli içe aktarma ifadesiyle bir sınıfın parçalarını içe aktaramazsınız.
+    Seçenek F yanlıştır çünkü seçenek C ve D kodun derlenmesini sağlar.
+*/
+
+/*
+12. Which of the following are true? (Choose all that apply)
+
+    A. A local variable of type boolean defaults to null.
+    B. A local variable of type float defaults to 0.
+    C. A local variable of type Object defaults to null.
+    D. A local variable of type boolean defaults to false.
+    E. A local variable of type boolean defaults to true.
+    F. A local variable of type float defaults to 0.0.
+    G. None of the above.
+
+   Cevap:
+    G. Seçenek G doğrudur çünkü yerel değişkenlere varsayılan değer atanmaz.
+    Bir yerel değişken açıkça başlatılmazsa kod derlenemez.
+    Eğer bu soru örnek değişkenleri ile ilgili olsaydı, D ve F seçenekleri doğru olurdu.
+    Boolean bir ilkel veri tipi varsayılan olarak false olarak atanırken float bir ilkel veri tipi 0.0 olarak atanır.
+
+*/
+
+/*
+15. Which of the following lines of code compile? (Choose all that apply)
+
+    A. int i1 = 1_234;
+    B. double d1 = 1_234_.0;
+    C. double d2 = 1_234._0;
+    D. double d3 = 1_234.0_;
+    E. double d4 = 1_234.0;
+    F. None of the above.
+
+   Cevap:
+    A, E. Alt çizgiler iki rakam arasında doğrudan bulunduğu sürece kullanılabilir.
+    Bu, seçenek A ve E'nin doğru olduğu anlamına gelir.
+    Seçenek B ve C yanlıştır çünkü alt çizgi ondalık noktasına bitişiktir.
+    Seçenek D yanlıştır çünkü alt çizgi son karakterdir.
+
+*/
+
+/*
+16.Given the following class, which of the following lines of code can replace INSERT CODE
+HERE to make the code compile? (Choose all that apply)
+    public class Price {
+        public void admission() {
+            INSERT CODE HERE
+            System.out.println(amount);
+        }
+    }
+
+    A. int amount = 9L;
+    B. int amount = 0b101;
+    C. int amount = 0xE;
+    D. double amount = 0xE;
+    E. double amount = 1_2_.0_0;
+    F. int amount = 1_2_;
+    G. None of the above.
+
+   Cevap:
+    Verilen soruda hangi ifadelerin doğru olduğu soruluyor.
+    Cevap B, C ve D şıklarıdır.
+    "0b" bir ikilik değeri için öneki ifade eder ve doğrudur.
+    "0x" ise bir onaltılık değeri için kullanılır.
+    Bu değer birçok ilkel türe atanabilir, bunların arasında int ve double da vardır, bu nedenle C ve D seçenekleri doğrudur.
+    A seçeneği yanlıştır, çünkü 9L bir long değerdir.
+    long amount = 9L yazılabilir.
+    E seçeneği yanlıştır, çünkü alt çizgi ondalık sayının hemen öncesinde bulunur.
+    F seçeneği ise yanlıştır çünkü alt çizgi en son karakterdir.
+*/
+
+/*
+17.Which of the following are true? (Choose all that apply)
+public class Bunny {
+ public static void main(String[] args) {
+ Bunny bun = new Bunny();
+ }
+}
+
+    A. Bunny is a class.
+    B. bun is a class.
+    C. main is a class.
+    D. Bunny is a reference to an object.
+    E. bun is a reference to an object.
+    F. main is a reference to an object.
+    G. None of the above.
+
+   Cevap:
+    A, E. Bunny bir sınıftır, bu sınıfın tanımından anlaşılabilir: public class Bunny.
+    'bun' ise bir nesneye referans olan bir değişkendir. main() bir metodtur.
+*/
+
+/*
+
+19.Suppose we have a class named Rabbit. Which of the following statements are true?
+(Choose all that apply)
+1: public class Rabbit {
+2: public static void main(String[] args) {
+3: Rabbit one = new Rabbit();
+4: Rabbit two = new Rabbit();
+5: Rabbit three = one;
+6: one = null;
+7: Rabbit four = one;
+8: three = null;
+9: two = null;
+10: two = new Rabbit();
+11: System.gc();
+12: }
+}
+
+    A. The Rabbit object from line 3 is first eligible for garbage collection immediately
+    following line 6.
+    B. The Rabbit object from line 3 is first eligible for garbage collection immediately
+    following line 8.
+    C. The Rabbit object from line 3 is first eligible for garbage collection immediately
+    following line 12.
+    D. The Rabbit object from line 4 is first eligible for garbage collection immediately
+    following line 9.
+    E. The Rabbit object from line 4 is first eligible for garbage collection immediately
+    following line 11.
+    F. The Rabbit object from line 4 is first eligible for garbage collection immediately
+    following line 12.
+
+   Cevap:
+    A, E. Üçüncü şıkte Rabbit sınıfı oluşturulduğu için sınıfın bir örneği (instance) olan
+    rabbit1, rabbit2, rabbit3, rabbit4 ve rabbit5 referansları yaratılır. Bunlar methodun
+    dışında olduğu için bu referanslar null edilse bile garbage collector onları toplamaz.
+    Ancak, rabbit2 referansı line 7’de rabbit1 referansına eşitlenince rabbit2’ye artık hiçbir
+    yerden erişilemez hale gelir. Bunun sonucunda option A doğrudur. Line 8’de rabbit1
+    referansı null edildiğinde, rabbit1 nesnesi artık hiçbir referans tarafından tutulmadığı
+    için garbage collector tarafından toplanabilir hale gelir. Dolayısıyla option E doğrudur.
+    Option B, C ve D hatalıdır çünkü hiçbir nesne, methodun sonuna gelinene kadar elden
+    çıkartılmaz.
+
+*/
+
