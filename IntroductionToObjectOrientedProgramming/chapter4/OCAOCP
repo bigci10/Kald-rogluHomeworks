@@ -1,0 +1,507 @@
+/*Question 14
+
+    14. Which of the following lines of code is not allowed as the first line of a Java class file?
+
+    A. import widget.*;
+    B. // Widget Manager
+    C. package sprockets;
+    D. int facilityNumber;
+
+    D. Bir sınıf yorumla başlayabilir, isteğe bağlı bir paket ifadesi veya bir paket ifadesi yoksa bir içe aktarma ifadesiyle başlayabilir.
+    Değişken tanımıyla başlayamaz, bu nedenle D şıkkı doğru cevaptır.
+*/
+
+/*Question 16
+
+    16. Given that the current directory is /user/home, with an application Java file in
+    /user/home/Manager.java that uses the default package, which are the correct commands
+    to compile and run the application in Java?
+
+    A. javac Manager
+     java Manager
+    B. javac Manager.java
+     java Manager
+    C. javac Manager
+     java Manager.class
+    D. javac Manager.java
+     java Manager.class
+
+   Cevap:
+    B. Derleme komutu, dosyanın tam adını veya göreli yolunu, .java uzantısı dahil olmak üzere gerektirir, bu nedenle A ve C seçenekleri yanlıştır.
+    Yürütme komutu, dosya ad uzantısı olmadan sınıf adını gerektirir, bu nedenle D seçeneği yanlıştır. Seçenek B, yalnızca doğru derleme ve yürütme komutları setidir.
+*/
+
+/*Question 17
+
+   17.Structuring a Java class such that only methods within the class can access its instance
+    variables is referred to as .
+    A. platform independence
+    B. object orientation
+    C. inheritance
+    D. encapsulation
+
+   Cevap : D
+*/
+
+/*Question 21
+
+    21. What is the result of compiling and executing the following class?
+
+    1: public class Tolls {
+        2: private static int yesterday = 1;
+        3: int tomorrow = 10;
+        4: public static void main(String[] args) {
+            5: Tolls tolls = new Tolls();
+            6: int today=20, tomorrow = 40;
+            7: System.out.print(today + tolls.tomorrow + tolls.yesterday);
+        8: }
+    9: }
+
+    A. The code does not compile due to line 6.
+    B. The code does not compile due to line 7.
+    C. 31
+    D. 61
+
+    Cevap: C. Kod herhangi bir sorun çıkarmadan derlenir ve çalıştırılır, bu nedenle A ve B seçenekleri yanlıştır.
+    Soru, değişken kapsamını anlama becerinize dayanır. today değişkeni yerel kapsama sahiptir, yani yalnızca yürütüldüğü yöntemde geçerlidir.
+    tomorrow değişkeni yöntemde yeniden tanımlanır, ancak satır 7'de kullanılan referans, 10 değerine sahip örnek değişkenine atıfta bulunur.
+    Son olarak, tomorrow değişkeni statiktir. Bir örnek referansı kullanarak bir statik değişkene erişmek önerilmez, ancak değişkenin okunmasını engellemez.
+    Sonuç olarak, satır 7 değerlendirilir ve (20 + 10 + 1) = 31 yazdırılır, bu nedenle doğru cevap C'dir.
+
+*/
+
+/*Question 22
+
+    22. Given the following class definition, which is the only line that does not contain a
+    compilation error?
+    1: public ThisClassDoesNotCompile {
+        2: double int count;
+        3: void errors() {}
+        4: static void private limit; }
+
+    A. Line 1
+    B. Line 2
+    C. Line 3
+    D. Line 4
+
+   Cevap:
+    Cevap: C. 1. satırda class anahtar kelimesi eksik.
+    2. satırda aynı değişken için iki farklı tür var.
+    3. satır bir yöntem tanımı için geçerli olduğundan doğru.
+    Son olarak, 4. satır dönüş türünden sonra erişim belirleyicisi, private, içeriyor, bu izin verilmiyor.
+    Ayrıca, void değişkenler için geçersiz bir türdür.
+*/
+
+/*Question 23
+
+    23. Which of the following features allows a Java class to be run on a wide variety of computers
+    and devices?
+
+    A. Encapsulation
+    B. Object oriented
+    C. Inheritance
+    D. Platform independence
+
+   Cevap:D
+*/
+/*Question 33
+
+    33. What is the output of the following application?
+    public class Airplane {
+        static int start = 2;
+        final int end;
+        public Airplane(int x) {
+            x = 4;
+            end = x;
+        }
+        public void fly(int distance) {
+            System.out.print(end-start+" ");
+            System.out.print(distance);
+        }
+
+        public static void main(String... start) {
+            new Airplane(10).fly(5);
+        }
+    }
+
+    A. 2 5
+    B. 8 5
+    C. 6 5
+    D. The code does not compile.
+
+   Cevap:
+    Kod derlenir, bu yüzden Seçenek D yanlıştır.
+    Kurucuya verilen girdi göz ardı edilir ve end değişkenine 4 atanır.
+    Başlangıç 2 olduğundan, 4'ün 2 çıkarılması 2'yi verir ve ardından 5 yazdırılır.
+    Böylece doğru seçenek A'dır
+
+*/
+
+/*Question 39
+
+    39. What is the proper filename extension for a Java source file?
+
+    A. .jav
+    B. .class
+    C. .source
+    D. .java
+
+   Cevap:
+    D. Java derlenmiş bytecode dosyası için doğru uzantı .java'dır, bu nedenle D seçeneği doğrudur.
+*/
+
+/*Question 48
+
+    48. What is the result of compiling and executing the following application?
+    package forecast;
+    public class Weather {
+        private static boolean heatWave = true;
+        public static void main() {
+        boolean heatWave = false;
+        System.out.print(heatWave);
+        }
+    }
+
+    A. true
+    B. false
+    C. It does not compile.
+    D. It compiles but throws an error at runtime.
+
+   Cevap:
+    D. Uygulama sorunsuz derlenir, bu nedenle Seçenek C yanlıştır.
+    Ancak uygulama çalıştırılmaz, çünkü main() yöntemi doğru yöntem imzasına sahip değildir.
+    Gerekli girdi argümanı, bir String dizisi, eksik.
+    Doğru bir giriş noktası olmadan uygulamayı çalıştırmaya çalışmak bir hata üretir, bu nedenle Seçenek D doğru cevaptır.
+*/
+
+/*Question 3
+
+    3. What is the proper filename extension for a Java bytecode compiled file?
+
+    A. .java
+    B. .bytecode
+    C. .class
+    D. .dll
+
+   Cevap:
+    C. Java derlenmiş bytecode dosyalarının doğru uzantısı .class'tır, bu nedenle C seçeneği doğrudur.
+*/
+
+/*Question 26
+
+    26. Given the following wildcard import statements, which class would be included in the
+    import?
+
+    import television.actor.*;
+    import movie.director.*;
+
+    A. television.actor.recurring.Marie
+    B. movie.directors.John
+    C. television.actor.Package
+    D. movie.NewRelease
+
+   Cevap:
+    C. Seçenek A, import ifadelerinde recurring alt paketi dahil edilmediği için yanlıştır.
+    Seçenek B, import ifadelerinde kullanılan tekil director yerine çoğul directors kullanır, bu yüzden yanlıştır.
+    Seçenek D, joker karakteri movie paketi yerine movie.director alt paketi için kullanıldığından yanlıştır.
+    Son olarak, Seçenek C, joker karakterli bir import ifadesi kullanılarak erişilebilen geçerli bir sınıf olduğundan doğrudur.
+
+*/
+
+/*Question 30
+
+    30. Which of the following is a true statement?
+
+    A. The java command compiles a .java file into a .class file.
+    B. The javac command compiles a .java file into a .class file.
+    C. The java command compiles a .class file into a .java file.
+    D. The javac command compiles a .class file into a .java file.
+
+   Cevap:
+    B. The javac command compiles a .java file into a .class bytecode file, making Option
+    B the correct answer.
+*/
+
+/*Question 31
+
+    31. Which of the following statements about Java is true?
+
+    A. Java is a procedural programming language.
+    B. Java allows method overloading.
+    C. Java allows operator overloading.
+    D. Java allows direct access to objects in memory.
+
+   Cevap:
+    B. Java nesne yönelimlidir, prosedürel değil, bu nedenle Seçenek A yanlış bir ifadedir.
+    Java, alt sınıflarda yöntem aşırı yükleme yapılmasına izin verir, bu nedenle Seçenek B doğrudur.
+    Operatör aşırı yükleme C++ gibi dillerde izin verilir, ancak Java'da değil, bu nedenle Seçenek C de doğru değildir.
+    Son olarak, Seçenek D, JVM'nin bellekteki nesnelerin konumunu yönettiği ve değişebileceği ve Java uygulaması için şeffaf olduğu için doğru bir ifade değildir.
+
+*/
+
+/*Question 35
+
+    35. Which of the following is a valid code comment in Java?
+
+    A. //////// Walk my dog
+    B. #! Go team!
+    C. / Process fails at runtime /
+    D. None of the above
+
+   Cevap:
+    A
+*/
+
+/*Question 36
+
+    36. Which of the following method signatures is not a valid declaration of an entry point in a
+    Java application?
+
+    A. public static void main(String... arguments)
+    B. public static void main(String arguments)
+    C. public static final void main(String[] arguments)
+    D. public static void main(String[] arguments)
+
+   Cevap:
+    B.
+
+*/
+
+/*Question 37
+
+    37. Given the file Magnet.java below, which of the marked lines can you independently insert
+    the line public String color; into and still have the code compile?
+
+    // line a1
+    public class Magnet {
+    // line a2
+        public void attach() {
+        // line a3
+        }
+    // line a4
+    }
+
+    A. a1 and a3
+    B. a2 and a4
+    C. a2, a3, and a4
+    D. a1, a2, a3, and a4
+
+*/
+
+/*Question 40
+
+    40. Given that a Math class exists in both the java.lang and pocket.complex packages, what
+    is the result of compiling the following class?
+
+    1: package pocket;
+    2: import pocket.complex.*;
+    3: import java.util.*;
+    4: public class Calculator {
+
+        5: public static void main(String[] args) {
+            6: System.out.print(Math.floor(5));
+        7: }
+    8: }
+
+    A. The code does not compile because of line 2.
+    B. The code does not compile because of line 3.
+    C. The code does not compile because of line 6.
+    D. The code compiles without issue.
+
+   Cevap:
+    C. Unutmayın ki java.lang otomatik olarak tüm Java sınıflarına dahil edilir, bu nedenle java.lang.Math ve pocket.complex.Math
+     her ikisi de bu sınıfa dahil edilir. Her iki paket kümesinin de içe aktarılması herhangi bir derleme sorununa neden olmaz,
+    bu nedenle Seçenek A yanlıştır. Satır 3 gereksiz bir içe aktarma işlemidir, ancak bu sınıfın derlenmesini engellemez, bu nedenle Seçenek B yanlıştır.
+    Math'in her iki sürümü de sınıfa içe aktarılabilir, ancak Math sınıfının kullanımı bir paket adı gerektirir.
+    Bu nedenle, 6. satır sınıf referansı belirsiz olduğundan derlenmez ve doğru cevap Seçenek C'dir ve Seçenek D yanlıştır.
+ */
+
+
+ /*Question 41
+
+    41. Given a class that uses the following import statements, which class would not be automatically accessible within the class without using its full package name?
+    import dog.*;
+    import dog.puppy.*;
+
+    A. dog.puppy.female.KC
+    B. dog.puppy.Georgette
+    C. dog.Webby
+    D. java.lang.Object
+
+   Cevap:
+    A. Option B ve C sınıf içinde erişilebilir durumda, çünkü import ifadeleri ile kapsanmaktadır.
+    Option D de java.lang.Object, açık bir import gerektirmeden kullanılabilir.
+    Sadece dog.puppy.female.KC sınıfı tam paket adı belirtilmeden erişilemez durumdadır, çünkü import ifadeleri alt paketleri de dahil etmemektedir.
+    Bu nedenle, doğru cevap Option A'dır.
+
+*/
+
+/*Question 42
+
+    42. is the technique of structuring programming data as a unit consisting of
+    attributes, with actions defined on the unit.
+    A. Encapsulation
+    B. Object orientation
+    C. Platform independence
+    D. Polymorphism
+
+   Cevap:
+    B.
+*/
+
+/*Question 43
+
+
+    43. Given the following class definition, what is the maximum number of import statements
+    that can be discarded and still have the code compile? For this question, assume that the
+    Broccoli class is in the food.vegetables package, and the Apple class is the food.fruit
+    package.
+
+    package food;
+    import food.vegetables.*;
+    import food.fruit.*;
+    import java.util.Date;
+    public class Grocery {
+     Apple a; Broccoli b; Date c;
+    }
+    A. 0
+    B. 1
+    C. 2
+    D. 3
+
+   Cevap:
+    A. Bu sınıftaki tüm import deyimleri gereklidir.
+    Herhangi birini kaldırmak sınıfın derlenmemesine neden olur, bu nedenle doğru cevap seçenek A'dır
+*/
+
+/*Question 47
+
+    47. Which statements about calling the compilation command javac and the execution command java are true?
+     I. java may use a period . to separate packages.
+     II. javac takes a .java file and returns a .class file.
+    III. java may use a slash (/) to separate packages.
+
+    A. I only
+    B. II only
+    C. I and II
+    D. I, II, and III
+
+   Cevap:
+    C. javac komutu metin tabanlı bir .java dosyasını alır ve ikili bytecode .class dosyasını döndürür, bu yüzden II numaralı ifade doğrudur.
+    java komutu paketleri ayırmak için bir nokta (.) kullanır, bir eğik çizgi (/) değil, bu nedenle I numaralı ifade doğrudur ve III yanlış bir ifadedir.
+    Bu nedenlerle, C seçeneği doğru cevaptır.
+*/
+
+/*Question 8
+
+    8. Which of the following is not a valid code comment in Java?
+
+    A. // Add 5 to the result
+    B. /*** TODO: Fix bug 12312 ***/
+    C. # Add configuration value
+    D. /* Read file from system ****/
+
+   Cevap: C
+*/
+
+/*Question 9
+
+    9. Which statement about a valid .java file is true?
+
+    A. It can only contain one class declaration.
+    B. It can contain one public class declaration and one public interface definition.
+    C. It must define at least one public class.
+    D. It may define at most one public class.
+
+   Cevap:
+    D.
+
+*/
+
+/*Question 19
+
+    19. Which of the following is true of a Java bytecode file?
+
+    A. It can be run on any computer with a compatible JVM.
+    B. It can only be executed on the same type of computer that it was created on.
+    C. It can be easily read and modified in a standard text editor.
+    D. It requires the corresponding .java that created it to execute.
+
+   Cevap: A
+*/
+
+*Question 20
+
+    20. What is the correct character for terminating a statement in Java?
+
+    A. A colon (:)
+    B. An end-of-line character
+    C. A tab character
+    D. A semicolon (;)
+
+   Cevap:
+    D.
+*/
+
+/*Question 25
+
+    25. Which of the following variables are always in scope for the entire program?
+
+    A. Package variables
+    B. Class variables
+    C. Instance variables
+    D. Local variables
+
+   Cevap:
+    B.
+*/
+
+/*Question 27
+
+    27. Which is the correct order of statements for a Java class file?
+
+    A. import statements, package statement, class declaration
+    B. package statement, class declaration, import statement
+    C. class declaration, import statements, package declaration
+    D. package statement, import statements, class declaration
+
+   Cevap:
+    D.
+*/
+
+/*Question 44
+
+    44. Given the following application, what is the expected output?
+    public class Keyboard {
+        private boolean numLock = true;
+        static boolean capLock = false;
+        public static void main(String... shortcuts) {
+            System.out.print(numLock+" "+capLock);
+        }
+    }
+
+    A. true false
+    B. false false
+    C. It does not compile.
+    D. It compiles but throws an exception at runtime.
+
+   Cevap:
+    C. Klavye sınıfının örneği olmadan statik main() yöntemi içinde numLock değişkenine erişilemez; bu nedenle, kod derlenmez ve Seçenek C doğru cevaptır.
+*/
+
+/*Question 50
+
+    50. Which statement about the JVM is true?
+
+    A. The JVM schedules garbage collection on a predictable schedule.
+    B. The JVM ensures that the application will always terminate.
+    C. The JVM requires a properly defined entry point method to execute the application.
+    D. A Java compiled code can be run on any computer.
+
+   Cevap:
+    C. Bir Java uygulaması çalışırken çöp toplama her zaman meydana gelebilir, özellikle de kullanılabilir bellek aniden azalırsa, bu nedenle Seçenek A yanlıştır.
+    Seçenek B de yanlıştır, çünkü asla sona ermeyen sonsuz bir döngüye sahip bir Java uygulaması oluşturmak oldukça basittir.
+    Seçenek D de yanlıştır, çünkü bir Java sınıfını yürütmek için bilgisayarın JVM'i çalıştırabilmesi gerekir.
+    Seçenek C, JVM'in uygulamayı yürütmeye başlamak için bir giriş noktası yöntemi gerektirdiği için tek doğru cevaptır.
+
+*/

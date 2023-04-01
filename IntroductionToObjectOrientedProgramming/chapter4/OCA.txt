@@ -1,0 +1,225 @@
+/*Question 1
+
+1. Which of the following are valid Java identifiers? (Choose all that apply)
+
+    A. A$B
+    B. _helloWorld
+    C. true
+    D. java.lang
+    E. Public
+    F. 1980_s
+
+   Cevap:
+    A, B, E seçenekleri geçerlidir.
+    Seçenek A, tanımlayıcılarda dolar işareti kullanabileceğiniz için geçerlidir.
+    Seçenek B, tanımlayıcılarda alt çizgi kullanabileceğiniz için geçerlidir.
+    Seçenek C geçerli bir tanımlayıcı değildir çünkü "true" Java'da ayrılmış(reserved) bir kelime olarak kullanılır.
+    Seçenek D, tanımlayıcılarda nokta kullanımına izin vermediği için geçerli değildir.
+    Seçenek E, Java'nın büyük-küçük harf duyarlı olduğu için "Public" bir ayrılmış kelime olmadığından geçerlidir.
+    Seçenek F, ilk karakterin harf, $ veya _ olmaması nedeniyle geçerli değildir.
+*/
+
+/*Question 2
+    2. What is the output of the following program?
+    1: public class WaterBottle {
+        2: private String brand;
+        3: private boolean empty;
+        4: public static void main(String[] args) {
+            5: WaterBottle wb = new WaterBottle();
+            6: System.out.print("Empty = " + wb.empty);
+            7: System.out.print(", Brand = " + wb.brand);
+        8: }
+    }
+
+
+    A. Line 6 generates a compiler error.
+    B. Line 7 generates a compiler error.
+    C. There is no output.
+    D. Empty = false, Brand = null
+    E. Empty = false, Brand =
+    F. Empty = null, Brand = null
+
+   Cevap:D. Boolean alanları false olarak, referansları null olarak başlatır, bu nedenle empty false ve brand null olarak başlatılır. "Brand = null" çıktısı verir.
+*/
+/*Question4
+    4. Given the following class, which of the following is true? (Choose all that apply)
+    1: public class Snake {
+    2:
+        3: public void shed(boolean time) {
+        4:
+            5: if (time) {
+            6:
+            7: }
+            8: System.out.println(result);
+        9:
+        10: }
+    11: }
+
+    A. If String result = "done"; is inserted on line 2, the code will compile.
+    B. If String result = "done"; is inserted on line 4, the code will compile.
+    C. If String result = "done"; is inserted on line 6, the code will compile.
+    D. If String result = "done"; is inserted on line 9, the code will compile.
+    E. None of the above changes will make the code compile.
+
+   Cevap:
+    A, B.
+    İkinci satırdaki değişken eklemek result değişkenini bir örnek değişkeni haline getirir. Örnek değişkenleri nesnenin tüm ömrü boyunca erişilebilir olduğundan, seçenek A doğrudur.
+    Seçenek B doğrudur çünkü dördüncü satırdaki değişken eklemek result'u, metotun tüm kapsamında olan bir yerel değişken haline getirir.
+    Altıncı satırdaki değişken eklemek result'u, 6-7. satırların kapsamında olan bir yerel değişken haline getirir.
+    8. satırda kapsam dışında olduğu için println derlenmez ve seçenek C yanlıştır.
+    Dokuzuncu satırdaki değişken eklemek result'u, 9-10. satırların kapsamında olan bir yerel değişken haline getirir.
+    8. satırın deklarasyonundan önce olduğu için derlenmez ve seçenek D yanlıştır.
+    Son olarak, seçenek E yanlış çünkü kod derlenebilir hale getirilebilir.
+*/
+
+
+/*Question 10
+10. Which of the following are legal entry point methods that can be run from the command
+line? (Choose all that apply)
+
+    A. private static void main(String[] args)
+    B. public static final main(String[] args)
+    C. public void main(String[] args)
+    D. public static void test(String[] args)
+    E. public static void main(String[] args)
+    F. public static main(String[] args)
+    G. None of the above.
+
+   Cevap:
+    E. Seçenek E, standart main() metodu imza formatıdır. Bunu ezberlemeniz gerekmektedir.
+    A seçeneği yanlıştır çünkü main() metodu public olmalıdır.
+    B ve F seçenekleri yanlıştır çünkü main() metodu void return tipinde olmalıdır.
+    C seçeneği yanlıştır çünkü main() metodu static olmalıdır.
+    D seçeneği yanlıştır çünkü main() metodu "main" olarak adlandırılmalıdır.
+
+*/
+
+/*Question 11
+    11. Which of the following are true? (Choose all that apply)
+
+    A. An instance variable of type double defaults to null.
+    B. An instance variable of type int defaults to null.
+    C. An instance variable of type String defaults to null.
+    D. An instance variable of type double defaults to 0.0.
+    E. An instance variable of type int defaults to 0.0.
+    F. An instance variable of type String defaults to 0.0.
+    G. None of the above.
+
+   Cevap:
+    C, D. Seçenek C doğrudur çünkü tüm örnek değişkenleri varsayılan olarak null değerine sahiptir.
+    Seçenek D doğrudur çünkü float ve double temel veri tipleri varsayılan olarak 0.0 değerine sahiptir.
+    Seçenek B ve E yanlıştır çünkü int temel veri tipi varsayılan olarak 0 değerine sahiptir, ancak char temel veri tipi varsayılan olarak null değerine sahiptir.
+    Seçenek A yanlıştır çünkü örnek değişkenleri varsayılan olarak null değerine sahip olurken, aynı zamanda temel veri tipleri varsayılan olarak sıfır değerine sahip olabilirler.
+*/
+
+/*Question14
+
+    14. Given the following class in the file /my/directory/named/A/Bird.java:
+    INSERT CODE HERE
+
+    public class Bird { }
+    Which of the following replaces INSERT CODE HERE if we compile from /my/directory?
+    (Choose all that apply)
+
+    A. package my.directory.named.a;
+    B. package my.directory.named.A;
+    C. package named.a;
+    D. package named.A;
+    E. package a;
+    F. package A;
+    G. Does not compile.
+
+   Cevap:
+    D. Paket adı, mevcut yolun altındaki herhangi bir klasörü temsil eder ve bu durumda A adlı bir pakettir.
+    B seçeneği yanlıştır çünkü paket adları değişken adları ve diğer tanımlayıcılar gibi harf büyüklüğüne duyarlıdır.
+*/
+
+/*Question 8
+
+    8. Given the following class, which of the following calls print out Blue Jay? (Choose all that
+    apply)
+    public class BirdDisplay {
+        public static void main(String[] name) {
+            System.out.println(name[1]);
+        }
+    }
+
+    A. java BirdDisplay Sparrow Blue Jay
+    B. java BirdDisplay Sparrow "Blue Jay"
+    C. java BirdDisplay Blue Jay Sparrow
+    D. java BirdDisplay "Blue Jay" Sparrow
+    E. java BirdDisplay.class Sparrow "Blue Jay"
+    F. java BirdDisplay.class "Blue Jay" Sparrow
+    G. Does not compile.
+
+
+   Cevap
+    B. Seçenek B doğrudur çünkü diziler sıfırdan saymaya başlar ve boşluklu karakter dizileri tırnak içinde olmalıdır.
+    Seçenek A yanlıştır çünkü "Blue" yazdırır.
+    Seçenek C yanlıştır çünkü "Jay" yazdırır.
+    Seçenek D yanlıştır çünkü "Sparrow" yazdırır.
+    Seçenekler E ve F yanlıştır çünkü "Error: Could not find or load main class Bird-Display.class" hatası verir.
+*/
+
+/*Question7
+
+    7. Given the following classes, which of the following snippets can be inserted in place of
+    INSERT IMPORTS HERE and have the code compile? (Choose all that apply)
+    package aquarium;
+    public class Water {
+        boolean salty = false;
+    }
+
+    package aquarium.jellies;
+    public class Water {
+        boolean salty = true;
+    }
+
+    package employee;
+    INSERT IMPORTS HERE
+    public class WaterFiller {
+        Water water;
+    }
+
+    A. import aquarium.*;
+    B. import aquarium.Water;
+       import aquarium.jellies.*;
+
+    C. import aquarium.*;
+       import aquarium.jellies.Water;
+
+    D. import aquarium.*;
+       import aquarium.jellies.*;
+
+    E. import aquarium.Water;
+       import aquarium.jellies.Water;
+
+    F. None of these imports can make the code compile.
+
+   Cevap:
+    A, B, C. Seçenek A doğrudur çünkü aquarium paketindeki tüm sınıfları, yani aquarium.
+    Water'ı da içine alır. B ve C seçenekleri ise classname kullanarak Water sınıfını içe aktardığından doğrudur.
+    Classname kullanarak içe aktarma, wildcards kullanmaktan önceliklidir, bu yüzden bunlar derlenir.
+    Seçenek D yanlıştır çünkü Java, hangi iki wildcard Water sınıfından hangisini kullanacağını bilemez.
+    Seçenek E yanlıştır çünkü iki içe aktarmada aynı sınıf adını belirleyemezsiniz
+*/
+
+/*Question 12
+
+    12. Which of the following are true? (Choose all that apply)
+
+    A. A local variable of type boolean defaults to null.
+    B. A local variable of type float defaults to 0.
+    C. A local variable of type Object defaults to null.
+    D. A local variable of type boolean defaults to false.
+    E. A local variable of type boolean defaults to true.
+    F. A local variable of type float defaults to 0.0.
+    G. None of the above.
+
+   Cevap:
+    G. Seçenek G doğrudur çünkü yerel değişkenlere varsayılan değer atanmaz.
+    Yerel bir değişken açıkça başlatılmadığı takdirde kod derlenemez.
+    Eğer bu soru örnek değişkenleri ile ilgili olsaydı, D ve F seçenekleri doğru olacaktı.
+    Boolean bir öncül varsayılan olarak false ve float bir öncül varsayılan olarak 0.0'a varsayılan olarak atanır.
+
+*/
