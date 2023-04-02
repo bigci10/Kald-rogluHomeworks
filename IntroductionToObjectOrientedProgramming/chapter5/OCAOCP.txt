@@ -1,0 +1,262 @@
+/*Question 1
+
+    1. Which of the following method signatures is a valid declaration of an entry point in a
+    Java application?
+
+    A. public void main(String[] args)
+    B. public static void main()
+    C. private static void start(String[] mydata)
+    D. public static final void main(String[] mydata)
+   Cevap:
+    Java uygulamalarındaki bir başlangıç noktası, public ve static erişim belirleyicileri, void geri dönüş tipi ve tek bir String[] argümanı olan bir main() yönteminden oluşur.
+    Giriş argümanındaki değişkenin adı önemli değildir.
+    A seçeneği, static erişim belirleyicisini, B seçeneği String[] argümanını ve C seçeneği yanlış erişim belirleyicisi ve yöntem adını içermekte.
+    Yalnızca D seçeneği bu gereksinimleri yerine getiriyor.
+    Başlangıç noktası yöntemi için final belirleyicisi isteğe bağlıdır ve eklenmesi mümkündür.
+*/
+
+/*Question 7
+
+    7. Which package is imported into every Java class by default?
+
+    A. java.util
+    B. java.lang
+    C. system.lang
+    D. java.system
+   Cevap:
+    Java'da her sınıfa java.lang paketi otomatik olarak dahil edildiğinden, B seçeneği doğrudur.
+    Diğer seçenekler açıkça dahil edilmelidir.
+    A seçeneği mevcut olsa da açıkça dahil edilmelidir.
+    C ve D seçenekleri ise standart Java çalışma zamanında mevcut değildir.
+*/
+
+/*Question 11
+
+    11. Which statement about import statements is true?
+
+        A. The class will not compile if it contains unused import statements.
+        B. Unused import statements can be removed from the class without causing a class to
+        become unable to be compiled.
+        C. The class will not compile if a duplicate import statement is present.
+        D. If a class contains an import statement for a class used in the program that cannot be
+        found, it can still compile.
+
+       Cevap:
+        Bir sınıf, kullanılmayan veya gereksiz import ifadelerine sahip olabilir ve bu halde bile derlenebilir.
+        Bu nedenle, A ve C seçenekleri yanlıştır.
+        Derleyici, import ifadesinin sınıfını konumlandırabilmelidir, dolayısıyla D seçeneği de yanlıştır.
+        Doğru cevap B seçeneğidir. Kullanılmayan import ifadelerini kaldırmak, bir sınıfın derlenememesine sebep olmaz.
+*/
+
+/*Question 13
+
+    13. Which statements about Java are true?
+     I. The java command can execute .java and .class files.
+     II. Java is not object oriented.
+     III. The javac command compiles directly into native machine code.
+
+        A. I only
+        B. III only
+        C. II and III
+        D. None are true.
+
+       Cevap:
+        Sorunuzda, verilen ifadelerin doğruluğu hakkında bir değerlendirme yapılıyor.
+        Ancak, ifadeler yanlış olduğundan, hiçbiri doğru değil ve bu nedenle seçenekler arasında yer alan "D" doğru yanıttır.
+        Bu ifadeler, Java programlama diline ve onun derlenme işlemine ilişkin yanlış anlamlar içeriyor.
+*/
+
+/*Question 15
+
+    15. Which one of the following statements is true about using packages to organize your code
+    in Java?
+
+        A. Every class is required to include a package declaration.
+        B. To create a new package, you need to add a package.init file to the directory.
+        C. Packages allow you to limit access to classes, methods, or data from classes outside the
+        package.
+        D. It is not possible to restrict access to objects and methods within a package.
+
+       Cevap:
+        Bu ifadede, Java sınıflarının paket bildirimi olmadan tanımlanabileceği ve varsayılan pakete yerleştirilebileceği belirtilir.
+        Bu nedenle A seçeneği doğru değildir. B seçeneği tamamen yanlıştır çünkü böyle bir dosya Java'da gereksizdir.
+        C seçeneği doğrudur çünkü uygulamanızı paketlere ayırmak, ana sebeplerden biridir.
+        D seçeneği ise yanlıştır, çünkü paket-özel erişim, metodların ve değişkenlerin erişimini yalnızca aynı paketteki sınıflarla sınırlar.
+*/
+
+/*Question 18
+
+    18. What is the output of the following code snippet?
+
+        String tree = "pine";
+        int count = 0;
+        if (tree.equals("pine")) {
+            int height = 55;
+            count = count + 1;
+        }
+        System.out.print(height + count);
+
+        A. 1
+        B. 55
+        C. 56
+        D. It does not compile.
+
+       Cevap:
+        "If-then" ifadesi bloğu içinde, "height" değişkeni tanımlanmıştır. Bu nedenle, "height" değişkeni dışında erişilemez ve kod derlenemez.
+*/
+
+/*Question 24
+
+    24. Which of the following is not a property of a JVM?
+
+        A. It prevents Java bytecode from being easily decoded/decompiled.
+        B. It supports platform independence.
+        C. It manages memory for the application.
+        D. It translates Java instructions to machine instructions.
+
+       Cevap:
+        Seçenek B, C ve D, her biri JVM'lerle ilgili doğru ifadelerdir. Seçenek A ise yanlış bir ifadedir çünkü Java byte kodları genellikle kolayca çözülebilir veya ayrıştırılabilir.
+
+*/
+
+/*Question 28
+
+    28. Given the following class definition, what is the maximum number of import statements
+    that can be discarded and still have the code compile? For this question, assume that the
+    Blackhole class is defined only in the stars package.
+
+        package planetarium;
+        import java.lang.*;
+        import stars.*;
+        import java.lang.Object;
+        import stars.Blackhole;
+        public class Observer {
+            public void find(Blackhole blackhole) {}
+
+    }
+
+        A. Zero
+        B. One
+        C. Two
+        D. Three
+
+       Cevap:
+        "stars." ve "stars.Blackhole" için yapılan import işlemleri gereksizdir, çünkü yalnızca "Blackhole" sınıfı kullanılıyor ve bu nedenle "stars." import ifadesi gerekli değildir.
+        Aynı etki, sadece "stars.Blackhole" ifadesini içeren bir import ifadesiyle de elde edilebilir.
+        Ayrıca, "java.lang.*" import ifadesi de gereksizdir, çünkü "java.lang" her Java sınıfında varsayılan olarak import edilir.
+        Benzer şekilde, "java.lang.Object" için yapılan import işlemi de gereksizdir çünkü "Object", zaten import edilmiş olan "java.lang" paketinin bir parçasıdır.
+        Bu nedenle, gereksiz import ifadelerinin kaldırılmasıyla, dört import ifadesinden üçü güvenle kaldırılabilir ve doğru cevap Seçenek D olur.
+*/
+
+/*Question 38
+
+    What is required to define a valid Java class file?
+
+    A. A class declaration
+    B. A package statement
+    C. At least one import statement
+    D. The public modifier
+
+   Cevap:
+    Seçenek A, Java sınıf dosyasında bir sınıf tanımının tek gerekli bileşen olduğu için tek doğru cevaptır.
+    Burada bir Java sınıf dosyasından bahsettiğimize dikkat edin; Java ayrıca bir dosyada arayüzlerin ve enumların tanımlanmasına da izin verir.
+    Bir sınıf bildirmek için paket ifadesi ve import ifadeleri isteğe bağlıdır, bu nedenle B ve C seçenekleri yanlıştır.
+    Bir sınıf, paket düzeyinde erişimle bir dosyada tanımlanabilir, bu nedenle D seçeneği de yanlıştır.
+*/
+
+/*Question 45
+
+    45. What is the result of compiling and executing the following class?
+
+    public class RollerSkates {
+        static int wheels = 1;
+        int tracks = 5;
+        public static void main(String[] arguments) {
+            RollerSkates s = new RollerSkates();
+            int feet=4, tracks = 15;
+            System.out.print(feet + tracks + s.wheels);
+        }
+    }
+
+    A. The code does not compile.
+    B. 5
+    C. 10
+    D. 20
+
+   Cevap:
+    Kod sorunsuz derlenir ve çalışır, bu nedenle Seçenek A yanlıştır.
+    Soru, print() ifadesindeki her değişkenin değerini ve kapsamını anlama becerisini gerektirir.
+    feet ve tracks değişkenleri yerel kapsamlıdır ve sırasıyla 4 ve 15 olarak ayarlanmıştır, sınıfın örneğindeki tracks değişkeninin 5 değeri göz ardı edilmiştir.
+    Son olarak, static sınıf değişkeni s.wheels'in değeri 1'dir.
+    Sonuç olarak, birleşik değer 20'dir, bu nedenle doğru cevap Seçenek D'dir.
+*/
+
+/*Question 4
+
+    4. Given that a Date class exists in both the java.util and java.sql packages, what is the
+    result of compiling the following class?
+
+    1: import java.util.*;
+    2: import java.sql.*;
+    3: public class BirthdayManager {
+        4: private Date rob = new Date();
+        5: private java.util.Date sharon = new java.util.Date();
+    6: }
+
+    A. The code does not compile because of lines 1 and 2.
+    B. The code does not compile because of line 4.
+    C. The code does not compile because of line 5.
+    D. The code compiles without issue.
+
+   Date sınıfının her iki pakette de var olması, her iki paketi de içe aktarmayı engellemediğinden, 1. ve 2. satırlar herhangi bir sorun olmadan derlenir ve Seçenek A yanlıştır.
+   4. satır, kullanılan Date sınıfının belirsiz olması nedeniyle derlenmeyecektir, bu nedenle Seçenek B doğrudur ve Seçenek D yanlıştır.
+   Son olarak, 5. satırın tam nitelikli sınıf adı kullanıldığı için derleneceği için Seçenek C yanlıştır.
+*/
+
+/*Question 5
+
+    5. Which of the following is not a facet of traditional object-oriented programming languages?
+
+    A. Objects are grouped as procedures, separate from the data they act on.
+    B. An object can take many forms via casting.
+    C. An object can hold data, referred to as attributes.
+    D. An object can perform actions, via methods.
+
+   Cevap:
+    Seçenek B, C ve D, geleneksel nesne yönelimli programlamanın özellikleridir.
+    Seçenek A ise nesne yönelimli bir proje genellikle verileri ve o verilerle ilişkili işlemleri tek bir nesneye gruplandırmaya eğilimlidir, bu nedenle yanlıştır.
+*/
+
+/*Question 6
+
+    6. Which variables have a scope limited to a method?
+
+    A. Interface variables
+    B. Class variables
+    C. Instance variables
+    D. Local variables
+
+   Cevap:
+    D.
+*/
+
+/*Qestion 12
+
+    What is the result of compiling and executing the following class?
+
+    1: public class ParkRanger {
+        2: int birds = 10;
+    3: public static void main(String[] data) {
+        4: int trees = 5;
+        5: System.out.print(trees+birds);
+        6: }
+    7: }
+
+    A. It does not compile.
+    B. It compiles but throws an exception at runtime.
+    C. It compiles and outputs 5.
+    D. It compiles and outputs 15.
+
+   Cevap: A.
+*/
+

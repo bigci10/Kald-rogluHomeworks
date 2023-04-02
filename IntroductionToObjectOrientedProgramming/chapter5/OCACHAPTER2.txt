@@ -1,0 +1,249 @@
+
+/*Question 3
+
+    3. What is the output of the following application?
+
+        1: public class CompareValues {
+            2: public static void main(String[] args) {
+                3: int x = 0;
+                4: while(x++ < 10) {}
+                5: String message = x > 10 ? "Greater than" : false;
+                6: System.out.println(message+","+x);
+            7: }
+        8: }
+
+
+        A. Greater than,10
+        B. false,10
+        C. Greater than,11
+        D. false,11
+        E. The code will not compile because of line 4.
+        F. The code will not compile because of line 5.
+
+       Cevap:
+        Bu örnekte, üçlü operatörde, biri String diğeri boolean bir değer olan iki ifade vardır.
+        Üçlü operatörün eşleşmeyen türleri olan ifadeler içerebilmesine izin verilir, ancak burada önemli olan String referansına atama yapmaktır.
+        Derleyici, ilk ifade değerini bir String olarak atamayı bilir, ancak ikinci boolean ifadesi bir String olarak ayarlanamaz;
+        bu nedenle, bu satır derlenmeyecektir.
+*/
+
+/*Question 6
+
+        What is the output of the following code snippet?
+
+            3: int x = 4;
+            4: long y = x * 4 - x++;
+            5: if(y<10) System.out.println("Too Low");
+            6: else System.out.println("Just right");
+            7: else System.out.println("Too High");
+
+            A. Too Low
+            B. Just Right
+            C. Too High
+            D. Compiles but throws a NullPointerException.
+            E. The code will not compile because of line 6.
+            F. The code will not compile because of line 7.
+
+
+           Cevap:
+            Verilen kod, iki "else" ifadesini ek bir "if-then" ifadesi olmadan zincirlemek mümkün olmadığı için derlenmez.
+            Bu nedenle doğru cevap F seçeneğidir. E seçeneği yanlıştır çünkü sadece 6. satır yanlışlık yaratmaz, yalnızca 7. satırla eşleştirildiğinde hata oluşur.
+            Bu kodun derlenebilmesi için bir çözüm olarak 6. satıra bir "if-then" ifadesi eklemek veya 7. satırı kaldırmak olabilir.
+*/
+
+/*Question 9
+
+    How many times will the following code print "Hello World"?
+
+        3: for(int i=0; i<10 ; ) {
+            4: i = i++;
+            5: System.out.println("Hello World");
+        6: }
+
+        A. 9
+        B. 10
+        C. 11
+        D. The code will not compile because of line 3.
+        E. The code will not compile because of line 5.
+        F. The code contains an infinite loop and does not terminate.
+
+       Cevap:
+        Bu örnekte for döngüsünün güncelleme ifadesi eksik,  F seçeneği yanlıştır.
+        Döngünün içindeki ifade i'yi arttırır ancak i'ye eski değerini atar.
+        Bu nedenle, i döngünün bitiminde başladığı değer olan 0 ile kalır.
+        Döngü sonsuz kez tekrarlanacak, her iterasyonda i değeri aynı kalacağından aynı ifadeyi sürekli yazdıracaktır.
+*/
+
+/*Question 15
+
+    What is the output of the following code snippet?
+
+        3: int x = 1, y = 15;
+        4: while x < 10
+        5: y––;
+        6: x++;
+        7: System.out.println(x+", "+y);
+
+
+        A. 10, 5
+        B. 10, 6
+        C. 11, 5
+        D. The code will not compile because of line 3.
+        E. The code will not compile because of line 4.
+        F. The code contains an infinite loop and does not terminate.
+
+       Cevap:
+        Bu aslında göründüğünden daha basit bir sorun.
+        4. satırdaki while ifadesinin parantezleri eksik olduğu için kod derlenmeyecektir ve cevap E seçeneğidir.
+        Ancak, parantezler eklenirse, döngü x++'ı içerecek süslü parantezleri kullanmadığı ve boolean ifadesinin hiç değişmediği için cevap F olacaktır.
+        En son olarak, her iki ifadeye de süslü parantezler eklenirse, çıktı 10 ve 6 olacaktır ve cevap B olacaktır.
+
+*/
+
+/*Question 16
+
+    What is the output of the following code snippet?
+
+        3: do {
+            4: int y = 1;
+            5: System.out.print(y++ + " ");
+        6: } while(y <= 10);
+
+        A. 1 2 3 4 5 6 7 8 9
+        B. 1 2 3 4 5 6 7 8 9 10
+        C. 1 2 3 4 5 6 7 8 9 10 11
+        D. The code will not compile because of line 6.
+        E. The code contains an infinite loop and does not terminate.
+
+       Cevap:
+        "Do-while" ifadesinin gövdesi içinde tanımlanan "y" değişkeni, 6. satırda kapsam dışında olduğu için bir derleyici hatası oluşturur. Bu nedenle D seçeneği doğru cevaptır.
+*/
+
+/*Question 17
+
+    What is the output of the following code snippet?
+
+    3: boolean keepGoing = true;
+    4: int result = 15, i = 10;
+    5: do {
+        6: i--;
+        7: if(i==8) keepGoing = false;
+        8: result -= 2;
+    9: } while(keepGoing);
+    10:  System.out.println(result);
+
+    A. 7
+    B. 9
+    C. 10
+    D. 11
+    E. 15
+    F. The code will not compile because of line 8.
+
+   Cevap:
+    Kod herhangi bir sorun olmadan derlendiği için F seçeneği doğru değildir.
+    Döngünün ilk yürütülmesinden sonra, i 9'a ve sonuç 13'e azaltılır.
+    İ 8 olmadığından keepGoing false olur ve döngü devam eder.
+    Bir sonraki adımda, i 8'e azaltıldı ve sonuç 11'e düştü.
+    İkinci yürütmede, i 8'e eşit olduğundan, keepGoing false olarak ayarlanır.
+    Döngünün sonunda, keepGoing artık doğru olmadığı için döngü sona erer.
+    Sonucun değeri 11 olduğundan, doğru cevap D seçeneğidir.
+*/
+
+/*Question 19
+
+    What is the result of the following code snippet?
+
+        3: int m = 9, n = 1, x = 0;
+        4: while(m > n) {
+            5: m--;
+            6: n += 2;
+            7: x += m + n;
+        8: }
+        9: System.out.println(x);
+
+        A. 11
+        B. 13
+        C. 23
+        D. 36
+        E. 50
+        F. The code will not compile because of line 7.
+
+       Cevap:
+        Verilen kod bloğunda ilk döngü iterasyonu öncesinde m = 9, n = 1 ve x = 0 olarak verilmiştir.
+        İlk döngü iterasyonundan sonra m 8'e, n 3'e ve x m+n ile 0+11=11 olarak güncellenir.
+        İkinci döngü iterasyonundan sonra m 7'ye, n 5'e ve x m+n ile 11+12=23 olarak yenilenir.
+        Üçüncü döngü iterasyonundan sonra m 6'ya, n 7'ye ve x m+n ile 23+13=36 olarak güncellenir.
+        Dördüncü iterasyonda m > n ifadesi yanlıştır, çünkü 6 < 7 doğru değildir.
+        Döngü sonlanır ve en son değer olan x, yani 36 çıktısı üretilir, bu nedenle doğru cevap seçenek D'dir.
+*/
+
+/*Question 20
+
+    What is the result of the following code snippet?
+        3: final char a = 'A', d = 'D';
+        4: char grade = 'B';
+        5: switch(grade) {
+            6: case a:
+            7: case 'B': System.out.print("great");
+            8: case 'C': System.out.print("good"); break;
+            9: case d:
+            10: case 'F': System.out.print("not good");
+        11: }
+
+
+        A. great
+        B. greatgood
+        C. The code will not compile because of line 3.
+        D. The code will not compile because of line 6.
+        E. The code will not compile because of lines 6 and 9.
+
+       Cevap:
+        Kod sorunsuz derlenir ve çalışır, bu nedenle seçenekler C, D ve E doğru değildir.
+        Not değeri 'B' olduğundan, "great" yazdıracak bir durum ifadesine karşılık geliyor.
+        Ancak, durum ifadesinden sonra bir "break" ifadesi bulunmadığı için, sonraki durum ifadesine geçilecek ve "good" yazdırılacaktır.
+        Ancak, bu durum ifadesinden sonra bir "break" bulunduğundan, durum ifadesi sona erecektir.
+        Doğru cevap böylece B seçeneğidir.
+*/
+
+/*Question 18
+
+    What is the output of the following code snippet?
+
+        3: int count = 0;
+        4: ROW_LOOP: for(int row = 1; row <=3; row++)
+        5: for(int col = 1; col <=2 ; col++) {
+            6: if(row * col % 2 == 0) continue ROW_LOOP;
+                7: count++;
+            8: }
+
+        9: System.out.println(count);
+
+        A. 1
+        B. 2
+        C. 3
+        D. 4
+        E. 6
+        F. The code will not compile because of line 6.
+
+        Cevap 1 ;
+
+*/
+
+/*Question 13
+
+    What is the output of the following code snippet?
+        3: int x1 = 50, x2 = 75;
+        4: boolean b = x1 >= x2;
+        5: if(b = true) System.out.println("Success");
+        6: else System.out.println("Failure");
+
+        A. Success
+        B. Failure
+        C. The code will not compile because of line 4.
+        D. The code will not compile because of line 5.
+
+       Cevap:
+        Kod derlenmesi başarılı olduğu için seçenekler C ve D yanlıştır.
+        4. satırdan sonra b'nin değeri false'tur. Ancak, 5. satırdaki if-then ifadesi bir karşılaştırma değil atamayı içermektedir.
+        Değişken b, 3. satırda true olarak atanmış ve atama operatörü true değerini döndürdüğü için, 5. satır çalışır ve Başarılı mesajını gösterir, bu nedenle cevap seçenek A'dır.
+
